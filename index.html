@@ -3,19 +3,276 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+    <title>Тимофей Рыко</title>
     <link rel="stylesheet" href="bulma/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        Hello World
-      </h1>
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
-      </p>
-    </div>
-  </section>
+    <!-- Navigation bar -->
+    <nav class="navbar is-link is-fixed-top">
+      <div class="navbar-brand">
+        <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+  
+      <div id="navbarExampleTransparentExample" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="#about">
+            <span class="icon">
+              <i class="fas fa-info is-size-5"></i>
+            </span>
+            <span class="is-size-4">Кто я?</span>
+          </a>
+          <a class="navbar-item" href="#consulting">
+            <span class="icon">
+              <i class="fas fa-video is-size-5"></i>
+            </span>
+            <span class="is-size-4">&nbspКонсалтинг</span>
+          </a>
+          <a class="navbar-item" href="#contact">
+            <span class="icon">
+              <i class="fas fa-envelope is-size-5"></i>
+            </span>
+            <span class="is-size-4">&nbspСвязь</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  
+    <!-- Header -->
+    <section class="hero is-link is-fullheight is-fullheight-with-navbar">
+      <div class="hero-body">
+        <div class="container">
+          <h4 class="subtitle is-5">
+            Приветствую, я —
+          </h4>
+          <h1 class="title is-1">
+            Тимофей Рыко
+          </h1>
+          <h2 class="subtitle is-3">
+            Я здесь, чтобы помочь вам
+          </h2>
+        </div>
+      </div>
+    </section>
+  
+    <!-- About -->
+    <section class="section" id="about">
+      <!-- Title -->
+      <div class="section-heading">
+      <h3 class="title is-1">Кто я?</h3>
+      <h4 class="subtitle is-4">Моя сильнейшая сторона — подача себя и других</h4>
+      </div>
+      <div class="container is-size-5">
+        <div class="columns is-centered">
+          <div class="column"></div>
+            <div class="content">
+            <p>
+              Мне 20 лет, я учусь в МФТИ и зарабатываю $3000 в месяц.
+              Дело в том, что я умею находить свои сильные стороны, развивать их и применять в проектах. Вот некоторые из них:
+            </p>
+            <ul style="list-style-position: inside;">
+              <li>"LinkedIn" для биотехнологов (Product Owner, HAWEX LTD)</li>
+              <li>Агентство по автоматизации бизнеса с помощью ИИ</li>
+              <li>Приложение, определяющее пульс и оксигенацию крови по видео (Machine Learning Engineer, University of Tartu lab)</li>
+            </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      <!-- Resume -->
+      <section class="section" id="resume">
+        <div class="section-heading">
+          <h4 class="subtitle is-4">Одно из резюме в области Data Science (одностраничная версия)</h4>
+          <a href="https://drive.google.com/file/d/1hOlSbpA6UIRroYOgGP-P0IYY0JdSMJE1/view?usp=sharing" class="button is-link is-large">
+            <span class="icon">
+              <i class="fas fa-file-alt"></i>
+            </span>
+            <span>Скачать</span>
+          </a>
+        </div>
+      </section>
+
+  
+    <!-- Skills tags -->
+    <!-- <br>
+          <div class="tags custom-tags">
+            <span class="tag is-light">Node.js</span><span class="tag is-light">Express.js</span><span class="tag is-light">VueJS</span><span
+              class="tag is-light">JavaScript</span><span class="tag is-light">HTML5</span><span class="tag is-light">Canvas</span><span
+              class="tag is-light">CSS3</span><span class="tag is-light">Bulma</span><span class="tag is-light">Bootstrap</span><span
+              class="tag is-light">jQuery</span><span class="tag is-light">Pug</span><span class="tag is-light">Stylus</span><span
+              class="tag is-light">SASS/SCSS</span><span class="tag is-light">Webpack</span><span class="tag is-light">Git</span><span
+              class="tag is-light">ASP.NET Web Forms</span><span class="tag is-light">MSSQL</span><span class="tag is-light">MongoDB</span><span
+              class="tag is-light">Apache Cordova</span><span class="tag is-light">Chrome Extensions</span>
+          </div> -->
+  
+    <!-- Services -->
+    <section class="section" id="consulting">
+      <div class="section-heading">
+        <h3 class="title is-1">Консалтинг</h3>
+        <p>
+          <a href="https://calendar.app.google/39cyB1g8WQMD3qmy7" class="button is-link is-large">
+            <span class="icon">
+              <i class="fas fa-calendar"></i>
+            </span>
+            <span>Записаться (первый раз — бесплатно)</span>
+          </a>
+          <br><br>
+        </p>
+        <h4 class="subtitle is-4">В каких областях я могу помочь?</h4>
+      </div>
+      <div class="container is-size-5">
+        <div class="columns">
+          <div class="column">
+            <div class="box">
+              <div class="content">
+                <h4 class="title is-4">Карьера и мотивация</h4>
+                Как составить резюме? Подготовиться к собеседованию? Выбрать правильное направление развития? Что вам <strong>действительно подходит?</strong> В конце концов, как не сдаваться на этом трудном пути? Давайте обсудим.
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="box">
+              <div class="content">
+                <h4 class="title is-4">Data Science & AI</h4>
+                У меня есть опыт разработки ИИ-решений и внедрения их в бизнес-процессы.
+                <strong>Как отделить красивые слова от реальной пользы?</strong> Как правильно собрать и подготовить данные? Я помогу вам разобраться.
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="columns">
+          <div class="column">
+            <div class="box">
+              <div class="content">
+                <h4 class="title is-4">IT-продукты</h4>
+                Я успел поучаствовать в разработке многих IT-решений в разных ролях и я понимаю, как это работает. Как создать инновационный продукт? <strong>Какие технологии выбрать?</strong> Разберёмся вместе.
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="box">
+              <div class="content">
+                <h4 class="title is-4">Python</h4>
+                Язык программирования Python — мой основной инструмент.
+                У меня <strong>большой опыт преподавания</strong>, также я проводил курс по Python для обработки данных в составе мини-группы.
+                Научу вас писать красивый и эффективный код.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Portfolio -->
+  
+    <!-- Achievement Level -->
+    <!-- <section class="section">
+      <nav class="level">
+        <div class="level-item has-text-centered">
+          <div>
+            <p class="heading">Tweets</p>
+            <p class="title">3,456</p>
+          </div>
+        </div>
+        <div class="level-item has-text-centered">
+          <div>
+            <p class="heading">Following</p>
+            <p class="title">123</p>
+          </div>
+        </div>
+        <div class="level-item has-text-centered">
+          <div>
+            <p class="heading">Followers</p>
+            <p class="title">456K</p>
+          </div>
+        </div>
+        <div class="level-item has-text-centered">
+          <div>
+            <p class="heading">Likes</p>
+            <p class="title">789</p>
+          </div>
+        </div>
+      </nav>
+    </section> -->
+  
+  
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <h3 class="title is-2">Связь со мной</h3>
+          <p>
+            <a href="https://calendar.app.google/39cyB1g8WQMD3qmy7" class="button is-link is-large">
+              <span class="icon">
+                <i class="fas fa-calendar"></i>
+              </span>
+              <span>Записаться (первый раз — бесплатно)</span>
+            </a>
+            <br><br>
+          </p>
+          <h4 class="subtitle is-5">У вас есть предложение по коллаборации или просто хотите написать?</h4>
+        </div>
+
+        <form method="POST" action="https://formspree.io/f/mknynyvz">
+  
+        <div class="columns">
+          <div class="column is-6 is-offset-3">
+            <div class="box">
+              <div class="field">
+                <label class="label is-size-5">Имя</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="Как к вам обращаться?">
+                </div>
+              </div>
+  
+              <div class="field">
+                <label class="label is-size-5">Почта</label>
+                <div class="control has-icons-left">
+                  <input class="input" type="email" placeholder="your.email@example.com" value="">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                </div>
+              </div>
+  
+              <div class="field">
+                <label class="label is-size-5">Сообщение</label>
+                <div class="control">
+                  <textarea class="textarea" placeholder="Какой у вас запрос?"></textarea>
+                </div>
+              </div>
+  
+              <div class="field is-grouped has-text-centered">
+                <div class="control">
+                  <button class="button is-link is-large" type="submit"><span class="icon">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                    <span>Написать</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </form>
+  
+      </div>
+    </section>
+  
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="section-heading">
+        <p>
+          <strong>Тимофей Рыко</strong> &copy; 2024
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
