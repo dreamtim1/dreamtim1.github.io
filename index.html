@@ -80,6 +80,23 @@
           menu.classList.toggle('is-active');
         });
       });
+
+      // Close menu when clicking on a menu item
+      const $navbarItems = Array.prototype.slice.call(document.querySelectorAll('.navbar-item'), 0);
+
+      $navbarItems.forEach(function ($el) {
+        $el.addEventListener('click', function () {
+          const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+          $navbarBurgers.forEach(function ($el) {
+            const target = $el.dataset.target;
+            const $target = document.getElementById(target);
+
+            $el.classList.remove('is-active');
+            $target.classList.remove('is-active');
+          });
+        });
+      });
+
     </script>
 
   <!-- Header -->
