@@ -1,83 +1,84 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Тимофей Рыко</title>
     <link rel="stylesheet" href="bulma/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        .navbar-menu {
-            overflow-x: hidden; /* Prevent horizontal overflow */
-        }
-        .navbar-burger {
-            overflow: hidden; /* Prevent horizontal overflow */
-        }
-        .card-content .button {
-            width: 100%; /* Make buttons fit within card content */
-            white-space: normal; /* Allow button text to wrap */
-        }
-    </style>
-</head>
-<body>
-<!-- Navigation bar -->
-<nav class="navbar is-link is-fixed-top" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarExampleTransparentExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-      </a>
-  </div>
+      /* Additional CSS for mobile view */
+      .navbar {
+        overflow: hidden; /* Ensure the navbar content doesn't overflow */
+      }
 
-  <div id="navbarExampleTransparentExample" class="navbar-menu">
-      <div class="navbar-end">
+      .navbar-menu {
+        overflow: hidden; /* Prevent horizontal scrolling */
+      }
+
+      .navbar-burger {
+        margin-left: auto; /* Align the burger to the right */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar is-link is-fixed-top" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarExampleTransparentExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarExampleTransparentExample" class="navbar-menu">
+        <div class="navbar-end">
           <a class="navbar-item" href="#about">
-              <span class="icon">
-                  <i class="fas fa-info is-size-5"></i>
-              </span>
-              <span class="is-size-4">Кто я?</span>
+            <span class="icon">
+              <i class="fas fa-info is-size-5"></i>
+            </span>
+            <span class="is-size-4">Кто я?</span>
           </a>
           <a class="navbar-item" href="#consulting">
-              <span class="icon">
-                  <i class="fas fa-video is-size-5"></i>
-              </span>
-              <span class="is-size-4">&nbspКонсалтинг</span>
+            <span class="icon">
+              <i class="fas fa-video is-size-5"></i>
+            </span>
+            <span class="is-size-4">&nbspКонсалтинг</span>
           </a>
           <a class="navbar-item" href="#contact">
-              <span class="icon">
-                  <i class="fas fa-envelope is-size-5"></i>
-              </span>
-              <span class="is-size-4">&nbspСвязь</span>
+            <span class="icon">
+              <i class="fas fa-envelope is-size-5"></i>
+            </span>
+            <span class="is-size-4">&nbspСвязь</span>
           </a>
+        </div>
       </div>
-  </div>
-</nav>
+    </nav>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-      // Get all "navbar-burger" elements
-      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
-      // Check if there are any navbar burgers
-      if ($navbarBurgers.length > 0) {
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
           // Add a click event on each of them
           $navbarBurgers.forEach(el => {
-              el.addEventListener('click', () => {
-                  // Get the target from the "data-target" attribute
-                  const target = el.dataset.target;
-                  const $target = document.getElementById(target);
+            el.addEventListener('click', () => {
+              // Get the target from the "data-target" attribute
+              const target = el.dataset.target;
+              const $target = document.getElementById(target);
 
-                  // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                  el.classList.toggle('is-active');
-                  $target.classList.toggle('is-active');
-              });
+              // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+              el.classList.toggle('is-active');
+              $target.classList.toggle('is-active');
+            });
           });
-      }
-  });
-</script>
-
+        }
+      });
+    </script>
 
     <!-- Header -->
     <section class="hero is-link is-fullheight is-fullheight-with-navbar">
