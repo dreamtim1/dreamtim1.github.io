@@ -8,31 +8,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-      /* Additional CSS for mobile view */
       .navbar {
-        overflow: hidden; /* Ensure the navbar content doesn't overflow */
+        overflow: hidden;
+        display: flex;
+        justify-content: center; /* Center-align the navbar items */
       }
-
       .navbar-menu {
-        overflow: hidden; /* Prevent horizontal scrolling */
+        display: flex;
+        justify-content: center; /* Center-align the navbar items */
+        width: 100%;
       }
-
-      .navbar-burger {
-        margin-left: auto; /* Align the burger to the right */
+      .navbar-end {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
+      }
+      .navbar-item {
+        flex: 0 1 auto; /* Allow items to shrink if necessary */
+        text-align: center; /* Center-align text in each navbar item */
+        white-space: nowrap; /* Prevent text from wrapping within an item */
+        padding: 0.5rem 1rem; /* Adjust padding for better spacing */
+      }
+      @media (max-width: 768px) {
+        .navbar-item {
+          font-size: 0.9rem; /* Adjust font size for smaller screens */
+        }
       }
     </style>
   </head>
   <body>
     <!-- Navigation bar -->
     <nav class="navbar is-link is-fixed-top" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarExampleTransparentExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-
       <div id="navbarExampleTransparentExample" class="navbar-menu">
         <div class="navbar-end">
           <a class="navbar-item" href="#about">
@@ -57,136 +63,8 @@
       </div>
     </nav>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        // Get all "navbar-burger" elements
-        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    <!-- Your other content goes here -->
 
-        // Check if there are any navbar burgers
-        if ($navbarBurgers.length > 0) {
-          // Add a click event on each of them
-          $navbarBurgers.forEach(el => {
-            el.addEventListener('click', () => {
-              // Get the target from the "data-target" attribute
-              const target = el.dataset.target;
-              const $target = document.getElementById(target);
-
-              // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-              el.classList.toggle('is-active');
-              $target.classList.toggle('is-active');
-            });
-          });
-        }
-      });
-    </script>
-
-    <!-- Header -->
-    <section class="hero is-link is-fullheight is-fullheight-with-navbar">
-        <div class="hero-body">
-            <div class="container">
-                <h4 class="subtitle is-5">Приветствую, я —</h4>
-                <h1 class="title is-1">Тимофей Рыко</h1>
-                <h2 class="subtitle is-3">Я здесь, чтобы помочь вам</h2>
-            </div>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section class="section" id="about">
-        <!-- Title -->
-        <div class="section-heading">
-            <h3 class="title is-1">Кто я?</h3>
-            <h4 class="subtitle is-4">Моя сильнейшая сторона — подача себя и других</h4>
-        </div>
-        <div class="container is-size-5">
-            <div class="columns is-centered">
-                <div class="column"></div>
-                <div class="content">
-                    <p>
-                        Мне 20 лет, я учусь в МФТИ и зарабатываю $3000 в месяц.
-                        Дело в том, что я умею находить свои сильные стороны, развивать их и применять в проектах. Вот некоторые из них:
-                    </p>
-                    <ul style="list-style-position: inside;">
-                        <li>"LinkedIn" для биотехнологов (Product Owner, HAWEX LTD)</li>
-                        <li>Агентство по автоматизации бизнеса с помощью ИИ</li>
-                        <li>Приложение, определяющее пульс и оксигенацию крови по видео (Machine Learning Engineer, University of Tartu lab)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Resume -->
-    <section class="section" id="resume">
-        <div class="section-heading">
-            <h4 class="subtitle is-4">Одно из резюме в области Data Science (одностраничная версия)</h4>
-            <a href="https://drive.google.com/file/d/1hOlSbpA6UIRroYOgGP-P0IYY0JdSMJE1/view?usp=sharing" class="button is-link is-large">
-                <span class="icon">
-                    <i class="fas fa-file-alt"></i>
-                </span>
-                <span>Скачать</span>
-            </a>
-        </div>
-    </section>
-
-    <!-- Consulting -->
-    <section class="section" id="consulting">
-        <div class="section-heading">
-            <h3 class="title is-1">Консалтинг</h3>
-            <p>
-                <a href="https://calendar.app.google/39cyB1g8WQMD3qmy7" class="button is-link is-large">
-                    <span class="icon">
-                        <i class="fas fa-calendar"></i>
-                    </span>
-                    <span>Записаться (первый раз — бесплатно)</span>
-                </a>
-                <br><br>
-            </p>
-            <h4 class="subtitle is-4">В каких областях я могу помочь?</h4>
-        </div>
-        <div class="container is-size-5">
-            <div class="columns">
-                <div class="column">
-                    <div class="box">
-                        <div class="content">
-                            <h4 class="title is-4">Карьера и мотивация</h4>
-                            Как составить резюме? Подготовиться к собеседованию? Выбрать правильное направление развития? Что вам <strong>действительно подходит?</strong> В конце концов, как не сдаваться на этом трудном пути? Давайте обсудим.
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="box">
-                        <div class="content">
-                            <h4 class="title is-4">Data Science & AI</h4>
-                            У меня есть опыт разработки ИИ-решений и внедрения их в бизнес-процессы.
-                            <strong>Как отделить красивые слова от реальной пользы?</strong> Как правильно собрать и подготовить данные? Я помогу вам разобраться.
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="columns">
-                <div class="column">
-                    <div class="box">
-                        <div class="content">
-                            <h4 class="title is-4">IT-продукты</h4>
-                            Я успел поучаствовать в разработке многих IT-решений в разных ролях и я понимаю, как это работает. Как создать инновационный продукт? <strong>Какие технологии выбрать?</strong> Разберёмся вместе.
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="box">
-                        <div class="content">
-                            <h4 class="title is-4">Python</h4>
-                            Язык программирования Python — мой основной инструмент.
-                            У меня <strong>большой опыт преподавания</strong>, также я проводил курс по Python для обработки данных в составе мини-группы.
-                            Научу вас писать красивый и эффективный код.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Reviews -->
     <section class="section" id="reviews">
