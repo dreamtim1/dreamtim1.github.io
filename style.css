@@ -1,24 +1,29 @@
+/* Reset margins and paddings for .skills-content .media */
 .skills-content .media {
-  margin: 0 !important;
-  padding: 4px !important;
-  border: 0 !important;
+  margin: 0;
+  padding: 4px;
+  border: none;
 }
 
+/* Ensure consistent height for progress bars */
 .skills-content .progress {
-  height: 4px !important;
+  height: 4px;
 }
 
+/* Center align custom tags */
 .custom-tags {
-  text-align: center !important;
+  text-align: center;
   display: block;
 }
 
+/* Add margin bottom to portfolio cards */
 .portfolio-container .card {
   margin-bottom: 2em;
 }
 
+/* Adjust section heading margins */
 .section-heading {
   text-align: center;
   margin-top: 1em;
-  margin-bottom: 6em;
+  margin-bottom: 2em; /* Reduce margin bottom for a more compact look */
 }
