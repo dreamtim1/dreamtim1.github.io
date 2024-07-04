@@ -21,7 +21,12 @@
     }
     .button {
       white-space: normal; /* Enables text wrapping */
-}
+    }
+    /* Transparent navbar */
+    .navbar.is-transparent {
+      background-color: rgba(50, 115, 220, 0.8); /* Adjust opacity as needed */
+      transition: background-color 0.3s ease; /* Smooth transition effect */
+    }
   </style>
 </head>
 
@@ -94,6 +99,18 @@
             $el.classList.remove('is-active');
             $target.classList.remove('is-active');
           });
+        });
+      });
+
+          document.addEventListener('DOMContentLoaded', function () {
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > window.innerHeight) {
+            navbar.classList.add('is-transparent');
+          } else {
+            navbar.classList.remove('is-transparent');
+          }
         });
       });
 
