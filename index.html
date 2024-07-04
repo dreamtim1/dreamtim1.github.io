@@ -201,13 +201,88 @@
         </div>
       </nav>
     </section> -->
+
+    <!-- Reviews -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section-heading">
+          <h3 class="title is-2">Отзывы</h3>
+        </div>
+
+        <div class="columns">
+          
+          <div class="column is-4">
+            <div class="card">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-128x128">
+                      <img src="client1.jpg" alt="Ульяна" class="is-rounded">
+                    </figure>
+                  </div>
+                </div>
+                <div class="content">
+                  <p>
+                    Текст отзыва, текст отзыва. И ещё текст отзыва. В общем, Тимофей прекрасен!
+                  </p>
+                  <p>
+                    <strong>— Ульяна Князюк</strong>
+                  </p>
+                  <a href="https://www.linkedin.com/in/ulifeee" class="button is-link is-medium">
+                    <span class="icon">
+                      <i class="fas fa-file-alt"></i>
+                    </span>
+                    <span>Расспросить Ульяну о Тимофее</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-4">
+            <div class="card">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-left">
+                    <figure class="image is-128x128">
+                      <img src="client2.jpg" alt="Максим" class="is-rounded">
+                    </figure>
+                  </div>
+                </div>
+                <div class="content">
+                  <p>
+                    Я хорошо знаю Тимофея, он очень профессиональный и ответственный человек.
+                    Я обратился к нему за помощью с составлением резюме. Уже на следующий день мы созвонились, выделили мои сильные стороны (о которых я раньше даже не думал) и сделали красивое CV. Также Тимофей дал мне "домашнее задание" — подготвить портфолио на GitHub. На второй консультации мы оформили портфоило и добавили его в CV.
+                  </p>
+                  <p>
+                    Сейчас, благодаря консультациям, я работаю в топовой биоинформатической лаборатории и кайфую от своей работы. 
+                  </p>
+                  <p>
+                    <strong>— Максим Щепетов</strong>
+                  </p>
+                  <a href="https://t.me/AristotelPetrov" class="button is-link is-medium">
+                    <span class="icon">
+                      <i class="fas fa-file-alt"></i>
+                    </span>
+                    <span>Расспросить Максима о Тимофее</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+    </section>
+     
+
   
   
     <!-- Contact -->
     <section class="section" id="contact">
       <div class="container">
         <div class="section-heading">
-          <h3 class="title is-2">Связь со мной</h3>
           <p>
             <a href="https://calendar.app.google/39cyB1g8WQMD3qmy7" class="button is-link is-large">
               <span class="icon">
@@ -221,6 +296,7 @@
         </div>
 
         <form method="POST" action="https://formspree.io/f/mknynyvz">
+        <input type="hidden" name="_subject" value="Request from consultations website" />
   
         <div class="columns">
           <div class="column is-6 is-offset-3">
@@ -228,14 +304,14 @@
               <div class="field">
                 <label class="label is-size-5">Имя</label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="Как к вам обращаться?">
+                  <input class="input" type="text" placeholder="Как к вам обращаться?" name="_subject">
                 </div>
               </div>
   
               <div class="field">
                 <label class="label is-size-5">Почта</label>
                 <div class="control has-icons-left">
-                  <input class="input" type="email" placeholder="your.email@example.com" value="">
+                  <input class="input" type="email" placeholder="your.email@example.com" value="" name="_replyto">
                   <span class="icon is-small is-left">
                     <i class="fas fa-envelope"></i>
                   </span>
@@ -245,7 +321,7 @@
               <div class="field">
                 <label class="label is-size-5">Сообщение</label>
                 <div class="control">
-                  <textarea class="textarea" placeholder="Какой у вас запрос?"></textarea>
+                  <textarea class="textarea" placeholder="Какой у вас запрос?" name="message"></textarea>
                 </div>
               </div>
   
